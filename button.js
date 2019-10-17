@@ -1,2 +1,5 @@
-document.getElementById("button1").addEventListener("click", function(){
-  document.getElementById("demo").innerHTML = "Hello";
+const button = document.querySelector('button');
+
+button.addEventListener('click', event => {
+  button.innerHTML = `Click count: ${event.detail}`;
+});
