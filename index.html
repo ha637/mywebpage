@@ -10,7 +10,7 @@
 <body>
 <p>Hello, my name is Hemanth Kumar and I go to Drexel University.</p>
  <p id="demo"> </p>
-  <button id="button1" type="submit" onclick="setColor('button1', '##FF0000');> Click </button> 
+  <button id="button1" type="submit"> Click </button> 
  <script type="text/javascript">
   window.addEventListener('DOMContentLoaded', (event) => {
     console.log('DOM fully loaded and parsed');
@@ -19,19 +19,7 @@
 button.addEventListener('click', event => {
   button.innerHTML = `Click count: ${event.detail}`;
 });
-  
-  function setColor(button1, color){
-    var count=1;
-    var property = document.getElementById(button1);
-    if (count == 0){
-        property.style.backgroundColor = "#0000FF"
-        count=1;        
-    }
-    else{
-        property.style.backgroundColor = "#FF0000"
-        count=0;
-    }
-  
+ 
  </script>
 </body>
 </html>
