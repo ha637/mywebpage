@@ -12,8 +12,13 @@
  <p id="demo"> </p>
   <button id="button1" type="submit"> Click </button> 
  <script type="text/javascript">
-  document.getElementById("myBtn").addEventListener("click", function(){
-  document.getElementById("demo").innerHTML = "Hello World";
+  window.addEventListener('DOMContentLoaded', (event) => {
+    console.log('DOM fully loaded and parsed');
+  const button = document.querySelector('button');
+
+button.addEventListener('click', event => {
+  button.innerHTML = `Click count: ${event.detail}`;
+});
  </script>
 </body>
 </html>
